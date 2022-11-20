@@ -22,7 +22,7 @@ int main(){
     text.setOrigin(text.getLocalBounds().width/2. , text.getLocalBounds().height/2.);
 
     text1.setFont(font);
-    text1.setString("recording started\nPress Q to end recording.");
+    text1.setString("Recording started\nPress ESC to end recording.");
     text1.setCharacterSize(50);
     text1.setFillColor(sf::Color::Black);
     text1.setOrigin(text.getLocalBounds().width/2. , text.getLocalBounds().height/2.);
