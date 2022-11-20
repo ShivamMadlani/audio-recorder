@@ -3,14 +3,17 @@
 #include <SFML/Audio/SoundBuffer.hpp>
 
 int main(){
-    sf::Window window(sf::VideoMode(700, 700), "Audio Recorder", sf::Style::Default);
-    
+    //check for audio capture support
     if(!sf::SoundBufferRecorder::isAvailable()){
         return 0;
     }
-
     sf::SoundBufferRecorder recorder;
 
+    //create a window
+    sf::Window window(sf::VideoMode(1000, 500), "Audio Recorder", sf::Style::Default);
+    window.setPosition(sf::Vector2i(960,545));
+
+    //window
     while (window.isOpen())
     {
         sf::Event event;
@@ -18,6 +21,7 @@ int main(){
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+
         }
     }
     return 0;
